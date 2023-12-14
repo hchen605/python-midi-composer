@@ -8,6 +8,7 @@ import gen_drum_track
 import gen_string_track
 import gen_guitar_track
 import gen_marimba_track
+from midi2audio import FluidSynth
 #import midi
 
 def inception_phase_20_pentatonic_minor(sm, num, key):
@@ -218,5 +219,6 @@ def inception_phase_20_pentatonic_minor(sm, num, key):
                     break
 
     midi.write_midifile("pentatonic_minor.mid", pattern)
+    #FluidSynth().play_midi('pentatonic_minor.mid')
             
             

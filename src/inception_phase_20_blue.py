@@ -9,6 +9,7 @@ import gen_drum_blue_track
 #import gen_string_track
 #import gen_guitar_track
 #import midi
+from midi2audio import FluidSynth
 
 def inception_phase_20_blue(sm, num, key):
     import midi
@@ -243,5 +244,5 @@ def inception_phase_20_blue(sm, num, key):
                         break
 
     midi.write_midifile("blue.mid", pattern)
-            
+    #FluidSynth().play_midi('blue.mid')
             
