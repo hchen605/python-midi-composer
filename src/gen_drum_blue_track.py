@@ -23,15 +23,15 @@ def gen_drum_blue_track(track, beat, vel, first_beat, third_beat, enable, note_c
             on = midi.NoteOnEvent(tick = int(beat), velocity = v, channel=9, pitch = SD)
             track.append(on)
         else:
-            on = midi.NoteOffEvent(tick = int(beat), velocity = v, channel=9, pitch = SD)
-            track.append(on)
+            off = midi.NoteOffEvent(tick = int(beat), velocity = v, channel=9, pitch = SD)
+            track.append(off)
     elif note_cnt == 7:
         if prob2 > 0.3:
             on = midi.NoteOnEvent(tick = int(beat), velocity = v, channel=9, pitch = SS)
             track.append(on)
         else:
-            on = midi.NoteOffEvent(tick = int(beat), velocity = v, channel=9, pitch = SS)
-            track.append(on)
+            off = midi.NoteOffEvent(tick = int(beat), velocity = v, channel=9, pitch = SS)
+            track.append(off)
     elif note_cnt%2 and note_cnt != 3 and note_cnt != 7:
         on = midi.NoteOnEvent(tick = int(beat), velocity = 0, channel=9, pitch = HH)
         track.append(on)

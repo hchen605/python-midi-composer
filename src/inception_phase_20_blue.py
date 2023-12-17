@@ -15,7 +15,7 @@ def inception_phase_20_blue(sm, num, key):
     import midi
     
     
-    mode = 2;
+    mode = 2
     tick_0 = 6400
     tick_1 = 6400
     tick_2 = 9600
@@ -52,7 +52,7 @@ def inception_phase_20_blue(sm, num, key):
     onset_piano_chord_solo = 0.5
     
     tick = 0
-    note = 72;
+    note = 72
     note_last = 72
     bass_last = 1
     

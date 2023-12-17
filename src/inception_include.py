@@ -100,6 +100,8 @@ D_minor_9 = [D3,F3,A3,C4,E2]
 Db_13 =     [Db3,F3,Ab3,B3,Bb2]
 #Db_13 = [Db3,F3,Ab3,B3,Eb4,Bb4]
 
+Bb_major_7 = [midi.Bb_3, midi.D_4, midi.F_4, midi.Ab_4]
+D_minor_7 = [midi.D_3, midi.F_3, midi.A_3, midi.C_4]
 
     
 #drum

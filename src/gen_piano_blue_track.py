@@ -9,7 +9,7 @@ def gen_piano_blue_track(track, beat, note_last, chord, mode, vel, first_beat, t
     sm_th = 9
     grace_prob_1 = 0.7
     grace_prob_2 = 0.85
-    grace_tick = 50
+    grace_tick = int(beat*0.22)
     grace_tick_offset = 0
     done = 0
     
