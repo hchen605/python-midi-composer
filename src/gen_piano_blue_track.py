@@ -43,7 +43,9 @@ def gen_piano_blue_track(track, beat, note_last, chord, mode, vel, first_beat, t
         note = pt.gen_next_note(note_last,mode)
         note = smooth.smooth(note, note_last, sm, sm_th)
         note_key = note + key
+        #note_key = 0
         grace = rand.random()
+        #grace = 0
         if grace_flag == 1:
             on = midi.NoteOnEvent(tick = beat - grace_tick, velocity = vel, pitch = note_key)
             track.append(on)
@@ -52,6 +54,7 @@ def gen_piano_blue_track(track, beat, note_last, chord, mode, vel, first_beat, t
         
         if ((grace > grace_prob_1 and first_beat) or (grace > grace_prob_2 and third_beat)) and (done == 0):
             on = midi.NoteOnEvent(tick = beat, velocity = vel, pitch = note_key - 1)
+            #on = midi.NoteOnEvent(tick = beat, velocity = vel, pitch = 0)
             track.append(on)
             #chord
             if first_beat:
@@ -95,6 +98,7 @@ def gen_piano_blue_track(track, beat, note_last, chord, mode, vel, first_beat, t
     else:
         note = note_last
         note_key = note + key
+        #note_key = 0
         if grace_flag == 1:
             off = midi.NoteOnEvent(tick = beat - grace_tick, velocity = 0, pitch = note_key)
             track.append(off)

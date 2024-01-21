@@ -10,6 +10,7 @@ import gen_string_track
 import gen_string_track_full
 import gen_guitar_track
 #import midi
+from midi2audio import FluidSynth
 
 def inception_phase_20_1(sm, num, key):
     import midi
@@ -217,7 +218,7 @@ def inception_phase_20_1(sm, num, key):
                     third_beat = 0
                     velocity = velocity_weak
     
-                beat_in = beat/2*not_first_note
+                beat_in = int(beat/2*not_first_note)
                 note_last, grace_flag = gen_piano_track.gen_piano_track(piano_track, beat_in, note_last, chord[chord_cnt], mode, velocity, first_beat, third_beat, onset, sm, grace_flag, cadence, last, key)
                 gen_guitar_track.gen_guitar_track(guitar_track, beat_in, note_last, chord[chord_cnt], mode, velocity_guitar, first_beat, third_beat, onset_guitar, key)
                 
@@ -229,5 +230,6 @@ def inception_phase_20_1(sm, num, key):
                     break
 
     midi.write_midifile("minor.mid", pattern)
-            
+    #FluidSynth().play_midi('minor.mid')
+    FluidSynth().midi_to_audio('minor.mid', 'minor.wav')
             

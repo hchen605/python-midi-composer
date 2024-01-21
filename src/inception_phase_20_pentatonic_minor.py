@@ -220,5 +220,6 @@ def inception_phase_20_pentatonic_minor(sm, num, key):
 
     midi.write_midifile("pentatonic_minor.mid", pattern)
     #FluidSynth().play_midi('pentatonic_minor.mid')
+    FluidSynth().midi_to_audio('pentatonic_minor.mid', 'pentatonic_minor.wav')
             
             

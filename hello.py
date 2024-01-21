@@ -119,7 +119,7 @@ r1.pack(padx = pad_x, anchor = 'w')
 #r2 = tk.Radiobutton(window, fg='gray' , bg='black',text='Hsin\'s Minor', variable=mode, value=1, command=print_selection)
 #r2.pack(padx = pad_x, anchor = 'w')
 
-r3 = tk.Radiobutton(window, fg='gray' , bg='black',text='Pop Minor Tunes', variable=mode, value=2, command=print_selection)
+r3 = tk.Radiobutton(window, fg='gray' , bg='black',text='Pop Minor Tunes', variable=mode, value=1, command=print_selection)
 r3.pack(padx = pad_x, anchor = 'w')
 
 r4 = tk.Radiobutton(window, fg='gray' , bg='black',text='Bossa Nova', variable=mode, value=3, command=print_selection)

@@ -10,6 +10,7 @@ from midi2audio import FluidSynth
 #import gen_string_track
 #import gen_guitar_track
 #import midi
+from midi2audio import FluidSynth
 
 def inception_phase_20_bossa(sm, num, key):
     import midi
@@ -199,5 +200,5 @@ def inception_phase_20_bossa(sm, num, key):
                 break
 
     midi.write_midifile("bossa.mid", pattern)
-    #FluidSynth().play_midi('bossa.mid')
-            
+    #FluidSynth().play_midi('blue.mid')
+    FluidSynth().midi_to_audio('bossa.mid', 'bossa.wav')        

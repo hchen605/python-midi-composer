@@ -14,7 +14,7 @@ def inception_phase_20_0(sm, num, key):
     import midi
     
     
-    mode = 0;
+    mode = 0
     tick_0 = 6400
     tick_1 = 6400
     tick_2 = 9600
@@ -205,4 +205,5 @@ def inception_phase_20_0(sm, num, key):
 
     midi.write_midifile("major.mid", pattern)
     #FluidSynth().play_midi('major.mid')
+    FluidSynth().midi_to_audio('major.mid', 'major.wav')
             

@@ -194,4 +194,4 @@ def inception_phase_20_pentatonic(sm, num, key):
 
     midi.write_midifile("pentatonic_major.mid", pattern)
     #FluidSynth().play_midi('pentatonic_major.mid')
-            
+    FluidSynth().midi_to_audio('pentatonic_major.mid', 'pentatonic_major.wav')

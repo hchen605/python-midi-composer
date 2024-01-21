@@ -1,6 +1,6 @@
 # python-midi-composer
 
-TBD: synthesizer, full multi-mode function, emotion mapping
+TBD: synthesizer for bass, full multi-mode function, emotion mapping
 
 ### Multi-style Music Generator
 Markov-chain based generator
@@ -9,7 +9,7 @@ Markov-chain based generator
 Please install through `music.yml`
 
 Command: 
-`python hello.py`
+`python hello.py` and run with UI.
 
 ## Demo
 link: https://www.youtube.com/watch?v=rvBFdsOshAE&ab_channel=Hsin.studio
